@@ -1,0 +1,64 @@
+# Case 03 – Microsoft Impersonation Phishing (Auth Failures)
+
+## Case Summary
+- **Threat Type:** Credential Harvesting
+- **Severity:** High
+- **Status:** Confirmed Phishing
+- **Technique:** Brand Impersonation + Multi-Domain Abuse
+
+---
+
+## Domain IOCs
+
+| Type | Indicator |
+|-----|----------|
+| Sender Domain | `xtbmondo.com` (Malicious) |
+| Tracking Domain | `sefnet.net` (Malicious) |
+| Reply-To Domain | `usual-assist.com` |
+| Bounce Domain | `nisihfjoz.co.uk` |
+
+---
+
+## IP Address IOCs
+
+| Type | Indicator |
+|-----|----------|
+| Sender IP | `143.92.60.168` |
+| Additional IP | `103.167.154.120` |
+
+---
+
+## Email Address IOCs
+
+| Type | Indicator |
+|-----|----------|
+| Reply-To | `media-protection@usual-assist.com` |
+| Return-Path | `bounce@nisihfjoz.co.uk` |
+
+---
+
+## URL IOCs
+
+| Type | Indicator |
+|-----|----------|
+| Tracking URL | `http://sefnet.net/track/o7436EVFfO5968877utQY8065QJB8855GHAz1` |
+
+---
+
+## Authentication Results
+
+| Control | Result |
+|------|------|
+| SPF | FAIL |
+| DKIM | FAIL |
+| DMARC | FAIL |
+| CompAuth | FAIL |
+
+---
+
+## Notes
+- Display name spoofed as **Microsoft Account Team**
+- Microsoft security emails always pass DMARC
+- Uses `mailto:` response instead of HTTPS portal
+- VirusTotal confirms malicious domains
+

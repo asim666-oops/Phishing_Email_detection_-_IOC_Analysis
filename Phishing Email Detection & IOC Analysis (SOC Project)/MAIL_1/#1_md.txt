@@ -1,0 +1,54 @@
+# Case 01 – Phishing Email Investigation (Mailgun Infrastructure Abuse)
+
+## Case Summary
+- **Threat Type:** Phishing
+- **Severity:** High
+- **Status:** Confirmed
+- **Technique:** Email Spoofing + Redirect-Based URL Obfuscation
+
+---
+
+## Network IOCs
+
+| Type | Indicator |
+|-----|----------|
+| Sender IP | `143.55.232.5` |
+| Sending Host | `pc232-5.mailgun.net` |
+| Mail Service | Mailgun |
+
+---
+
+## Domain IOCs
+
+| Type | Indicator |
+|-----|----------|
+| Spoofed From Domain | `digitalmashreq.mg.tdi.tc` |
+| Mail Domain | `mg.tdi.tc` |
+| Redirect Domain | `bing.com` |
+| Final Malicious Domain | `marhaba-travel.com` |
+
+---
+
+## URL IOCs
+
+| Type | Indicator |
+|-----|----------|
+| Malicious URL | `http://marhaba-travel.com/fr/formules` |
+
+---
+
+## Email Header IOCs
+
+| Type | Indicator |
+|-----|----------|
+| From Address | `postmaster@digitalmashreq.mg.tdi.tc` |
+| Return-Path | `bounce@mg.tdi.tc` |
+| Message-ID | `20230920104941.05fa86daa715a6e3@mg.tdi.tc` |
+
+---
+
+## Notes
+- SPF, DKIM, DMARC: **FAIL**
+- Redirect-based phishing confirmed via urlscan.io
+- Threat validated using VirusTotal
+
