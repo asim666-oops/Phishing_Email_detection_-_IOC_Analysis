@@ -4,7 +4,6 @@
 This project demonstrates a real-world Security Operations Center (SOC) phishing email investigation workflow.  
 It focuses on identifying malicious email campaigns through header analysis, authentication validation, URL behavior analysis, **attachment analysis**, and IOC extraction — closely mirroring real SOC alert triage and escalation procedures.
 
-All investigations were conducted using **passive and controlled analysis techniques** without executing malicious content.
 
 ---
 
